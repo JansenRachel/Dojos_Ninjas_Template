@@ -1,0 +1,45 @@
+ Dojos.objects.create(name="Dojo One", city="Albany", state="New York")
+ Dojos.objects.create(name="Dojo Two", city="Annapolis", state="Maryland")
+ Dojos.objects.create(name="Dojo Three", city="Atlanta", state="Georgia")
+
+one = Dojos.objects.get(id=1)
+one.delete()
+two = Dojos.objects.get(id=2)
+two.delete()
+three = Dojos.objects.get(id=3)
+three.delete()
+
+Dojos.objects.create(name="Dojo1", city="Agusta", state="Maine")
+Dojos.objects.create(name="Dojo2", city="Austin", state="Texas")
+Dojos.objects.create(name="Dojo3", city="Baton Rouge", state="Louisiana")
+
+Dojo1 = Dojos.objects.get(id=4)
+Ninjas.objects.create(first_name="Michelangelo", last_name="Fisher", dojo=Dojo1)
+Ninjas.objects.create(first_name="Raphael", last_name="Ritchson", dojo=Dojo1)
+Ninjas.objects.create(first_name="Donatello", last_name="Howard", dojo=Dojo1)
+
+Dojo2 = Dojos.objects.get(id=5)
+Ninjas.objects.create(first_name="Naruto", last_name="Uzumaki", dojo=Dojo2)
+Ninjas.objects.create(first_name="Itachi", last_name="Uchiha", dojo=Dojo2)
+Ninjas.objects.create(first_name="Kakashi", last_name="Hatake", dojo=Dojo2)
+
+Dojo3 = Dojos.objects.get(id=6)
+Ninjas.objects.create(first_name="Peggy", last_name="Olson", dojo=Dojo3)
+Ninjas.objects.create(first_name="Monica", last_name="Geller", dojo=Dojo3)
+Ninjas.objects.create(first_name="Olivia", last_name="Pope", dojo=Dojo3)
+
+Dojo1.ninjas.all()
+
+Dojo3.ninjas.all()
+
+last_ninja = Ninjas.objects.last()
+last_ninja.dojo
+
+Dojos.objects.create(name="Dojo4", city="Bismarck", state="North Dakota", desc = "Last Dojo added for this assignment")
+
+
+
+
+
+
+
